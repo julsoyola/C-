@@ -1,0 +1,10 @@
+Run a command
+
+Compiling
+g++ filename.cpp
+
+Running
+./a.out
+
+
+
