@@ -1,0 +1,38 @@
+Lists - Linear
+Ordered Collection of Data
+Linear Structure
+
+Characteristics:
+
+Data:
+- Items
+- Number of Items
+- Capacity 
+
+Operations:
+- Read/Write
+- Add/Remove
+- Count
+- Traverse the list
+
+
+
+++++++++++++++++++++++++++++++
+List - Array
+Characterstics: 
+- Allows Random Access
+- Contigious Indices
+- Fixed Size
+
+Operations:
+- Adding and Removing 
+
+Performance:
+            Add:      Remove:
+Beginning:  O(n)      O(n)
+End:        O(1)      O(1)
+Middle"     O(n/2) = O(n) for both
+
+Benefits: Access Time: arr[i] = arr + (i*sizeof(type))
+
+Drawbacks: Expensive for adding and removing elements from the front

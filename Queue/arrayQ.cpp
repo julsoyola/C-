@@ -1,0 +1,2 @@
+// Problem Statement
+// A naive array-based implementation of a queue causes a rightward drift problem. Rightward drift can cause a queue-full condition even when the queue contains few entries. One possible solution to this problem is to shift array entries to the left after each removal from the queue. However, shifting entries after each removal is not really satisfactory as it is not efficient. A much more elegant solution is viewing the array as circular.

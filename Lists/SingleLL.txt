@@ -1,0 +1,103 @@
+List - Single LL
+
+- Connecting each data points through pointers. 
+
+value->nextValue->anotherValue->Null
+
+To build a LL we need to create a struct or class
+
+#include <iostream>
+using namespace std;
+
+class Node
+{
+    public:
+        Node *next;
+        int data;
+}
+
+int main(){
+Node* n1 = new Node;
+n1->data = 10
+n1->next = nullptr; 
+
+n1->next = new Node;
+n1->next->data = 20;
+n1->next->next = nullptr;
+
+n1->next->next = new Node;
+n1->next->next->data = 30;
+n1->next->next->next = nullptr;
+
+return 0;
+}
+
+// To fix the issue of having so many nexts do it like this
+class Node
+{
+    public:
+        Node *next;
+        int data;
+        Node(int d, Node *n);
+        int size();
+}
+Node::Node(int d, Node*n)
+{
+  this->data=d;
+  this->next=n;
+}
+int Node::size()
+{
+    // an empty LL
+    if (this==nullptr)
+    {
+      return 0;
+    }
+else
+    {
+// Adds 1 since we're adding a value. 
+      return 1 + (this->next)->size();
+    }
+}
+int main()
+{
+  Node *obj = new Node(10, nullptr);
+obj = new Node(20,obj);
+obj = new Node(30, obj);
+cout <<"Size = "<< obj->size();
+return 0;
+}
+
+// Characterstics 
+- Does not allow rando access
+- You must traverse through the list
+
+Operations:
+- Add - PushFront, Push Back(key)
+- Remove _ same thing ^
+- Access - get front front or back
+- Find(key), Erase(key), Empty()
+- AddBefore(Node, key), AddAfter(Node,Key);
+
+Performance:
+PushFront - O(1) since we have access to head 
+PopFront O(1)
+TopFront O(1)
+Find O(n)
+
+PushBack O(n)
+PopBack  O(n)
+TopBack  O(N)
+Erase    O(N)
+
+AddBefore - we can't, we need to find the node and then make a new variable to temp it and replace it O(n)
+AddAFter O(1) - just add it next
+
+Empty O(1) - just check if head is Null
+
+Beneifts 
+- Adding/removing is faster O(1)
+
+DrawBacks
+- Expensive in terms of memory O(n) no random access
+- TopBack,PushBack,AddBefore are expensive

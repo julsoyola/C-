@@ -1,0 +1,18 @@
+Space:
+
+List Size:
+- Array implmentation required an estimate of the size when the list is created
+
+- LL grows as needed. 
+
+Element Size
+- Array requires storage of just item
+
+- LL storage of item, and pointer 
+
+Time
+- Array access time is faster
+- costly add/remove
+
+- LL rquires stepping through the list to access
+

@@ -1,0 +1,1 @@
+Having a Tail allows us access to both ends of the list. Allowing for faster tarversing

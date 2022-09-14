@@ -1,0 +1,18 @@
+How to use it
+
+List containers are implemented as doubly LL
+
+Constructor(n, val) - constructs a container w n elements. Each element is is a copy of Val 
+
+void push_front (val) - Inserts a new element at the beg of the list, right before the its current first element. 
+
+std::list<int> myList (4,100) [100,100,100,100]
+
+myList.push_front (200); [200,100,100,100,100]
+
+C++ also supports Iterators:
+for (list<int>::iterator it=mylist.begin();)
+
+^^ returns the beg of the list AKA 200
+
+To use an iterator u first make ur conatiner like above and then iterate through it
